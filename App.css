@@ -2,6 +2,7 @@
 /*add font family, background image*/
 
 body {
+    position: fixed;
     font-family: "Poppins", sans-serif;
 }
 
@@ -10,16 +11,20 @@ body {
 /*Jumbotron*/
 .jumbotron {
     display: grid;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    padding-left: 5.21vw;
     grid-template-columns: 50% 50%;
     height: 100vh;
     width: 100vw;
     background-color: #f4f8fa;
-    margin: 0;
-    padding: 0;
     row-gap: 5px;
 }
 
-
+.box1 {
+    margin-left: 4%;
+}
 
 /*map*/
 #googleMap {
@@ -53,6 +58,8 @@ body {
 #to {
     box-sizing: border-box;
     width: 30vw;
+    position: relative;
+    right: 1%;
     font-weight: 500;
     font-size: 24px;
     line-height: 120%;
@@ -61,21 +68,33 @@ body {
     font-style: normal;
     border: 1px solid #E9EEF2;
     border-radius: 4px;
+    height: 56px;
+    width: 150px;
+
+    border-radius: 4px;
+
+
     color: #4D6475;
 }
 
 .cbtn {
     background-color: #1B31AB;
     color: #fff;
-    border-radius: 30px;
+    border-radius: 32px;
+    width: 141px;
+    height: 62px;
     position: relative;
-    left: 70%;
+    left: 150%;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
 
 }
 
-.box {
-    padding-top: 100px;
-}
 
 .alert-info {
     width: 426px;
@@ -100,11 +119,12 @@ img {
     grid-column: 1/5;
     width: 200px;
     height: 95%;
+    margin-left: 3.6vw;
     object-fit: contain;
 }
 
 .imgs {
-
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -123,36 +143,41 @@ img {
     font-size: 20px;
     line-height: 120%;
     width: 50vw;
-    height: 5vh;
+    height: fit-content;
     justify-content: space-between;
     align-items: center;
 }
 
 .alert-info {
-    padding-left: 10px;
     margin-bottom: 10px;
     height: fit-content;
     width: fit-content;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
 
 .outputs {
     border: 0.2px solid rgb(211, 208, 208);
     height: fit-content;
-    width: fit-content;
-    border-radius: 5px;
+    width: 550px;
+    margin-top: 10%;
+    border-radius: 8px;
     overflow: hidden;
 }
 
+.mb-3 {
+    width: 272;
+}
 
 
 #distval {
     height: fit-content;
     width: fit-content;
-    margin-right: 10%;
+    margin-right: 35%;
     width: 152px;
     height: 38px;
+    padding-top: 3px;
+    padding-right: 25px;
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 500;
@@ -163,4 +188,24 @@ img {
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+.input-markerholder {
+    margin-right: 10%;
+
+    background: url('marker.png');
+}
+
+#mark {
+    margin-left: 2px;
+}
+
+span {
+    padding: 0;
+    width: fit-content;
+}
+
+form {
+    width: 272px;
+    line-gap-override: 10px;
 }
