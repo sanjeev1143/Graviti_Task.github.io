@@ -36,9 +36,12 @@ function calcRoute() {
         if (status == google.maps.DirectionsStatus.OK) {
 
             //Get distance and time
-            const distance = result.routes[0].legs[0].distance.value / 1000;
+            // India system hi-IN
+            const distance = parseInt(result.routes[0].legs[0].distance.value / 1000).toLocaleString('hi-IN');
+
+
             const output = document.querySelector('#output');
-            output.innerHTML = "<div class='alert-info'>The distance between <b>" + document.getElementById("from").value + "</b> and <b>" + document.getElementById("to").value + "</b> is <b>" + distance + "kms.<br /> Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + "</div>";
+            output.innerHTML = "<div class='alert-info'>The distance between <b>" + document.getElementById("from").value + "</b> and <b>" + document.getElementById("to").value + "</b> is <b>" + distance + " " + "kms.<br /> Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + "</div>";
             document.querySelector("#distval").innerHTML = "<div>" + distance + "kms</div>";
             //display route
             directionsDisplay.setDirections(result);
