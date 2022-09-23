@@ -209,3 +209,62 @@ form {
     width: 272px;
     line-gap-override: 10px;
 }
+
+@media screen and (max-width: 700px) {
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        padding-left: 5.21vw;
+        grid-template-columns: 50%;
+        height: 100vh;
+        width: 100vw;
+        background-color: #f4f8fa;
+        row-gap: 5px;
+    }
+
+    .cbtn {
+        background-color: #1B31AB;
+        color: #fff;
+        border-radius: 32px;
+        width: 141px;
+        height: 62px;
+        position: relative;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+
+
+    }
+
+    .imgs {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        width: 200%;
+        height: 10vh;
+        background-color: #fff;
+    }
+
+    .jumbotron h2 {
+        text-align: center;
+        color: #1B31AB;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-size: 20px;
+        line-height: 120%;
+        position: relative;
+        left: 2vh;
+        grid-column: 1 / 5;
+    }
+
+}
