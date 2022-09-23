@@ -210,7 +210,7 @@ form {
     line-gap-override: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .jumbotron {
         display: flex;
         flex-direction: column;
@@ -266,5 +266,9 @@ form {
         left: 2vh;
         grid-column: 1 / 5;
     }
+    body {
+
+    font-family: "Poppins", sans-serif;
+}
 
 }
